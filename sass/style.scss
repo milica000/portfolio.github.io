@@ -1,0 +1,317 @@
+*{
+    margin: 0 auto;
+    padding: 0 auto;
+}
+
+@import "partials/mixins";
+@import "partials/variables";
+
+body{
+    background-image: url("../img/background.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-color: darken($color: #000000, $amount: 5%);
+};
+#header-all{
+    @include flexCenter;
+     color: $primary_color;
+     height: 30%;
+     img{
+        width: $width_1;
+        border-radius: 25px;
+     }
+        
+};
+.navigation{
+    @include flexCenter;
+    li{
+        margin: 10px;
+        text-transform: uppercase;
+        a{
+            color: $primary_color;
+            text-decoration: none;
+            &:hover {
+                background-color: $primary_color;
+                padding: 5px;
+                color: $secondary_color;
+                transition: 0.7s;
+                border-radius: 10px;
+                &::after{
+                    transition: 0.7s;
+                }
+            }
+        }
+    }
+};
+ul{
+    @include fontText;
+};
+.block_one{
+    @include flexCenter;
+    width: 80%;
+    margin-top: 5%;
+    img{
+        width: 35%;
+        padding: 0px 0px 0px 30px;
+    }
+}
+.text{
+    @include fontText;
+    h1{
+        font-size: 30pt;
+        color: $primary_color;
+        text-transform: uppercase;
+        text-align: center;
+        hr{
+            color: $primary_color;
+            p{
+                text-align: center;
+                font-size: 14pt;
+            }
+        }
+    }
+}
+progress{
+    width: 100%;
+}
+hr{
+    border: solid 1px $primary_color;
+}
+.block_two{
+    background-image: url(../img/background_two.jpg);
+    height: $height_one;
+    width: 100%;
+    #about_me{
+        width: 100%;
+        text-align: left;
+        font-size: 14pt;
+        color: $secondary_color;
+        font-weight: 200;
+        @include flexColumn;
+        @include font_text;
+            h1{
+                @include fontText;
+                font-weight: $font_weight_one;
+                font-size: 35pt;
+                color: $secondary_color;
+                margin: $margin;
+            }
+        }
+    }
+
+.text_two{
+    margin-top: 20px;
+}
+#projects{
+    @include flexColumn;
+    width: $block_width;
+    border-radius: $border-radius;
+    border: solid 3px $primary_color;
+        img{
+            width: 550px;
+            border-radius: 70px;
+            &:hover{
+                border-radius: 50px;
+                transition: 0.7s;
+                width: 600px;
+                transition: 0.6s;
+                &::after{
+                    transition: 0.6s;
+            }
+        }
+    }
+}
+#projects h1{
+    color: $primary_color;
+    margin-top: 20px;
+    text-transform: uppercase;
+    font-size: 35pt;
+    @include fontText;
+    text-align: center;
+    font-weight: $font_weight_one;
+}
+hr{
+    width: 100%;
+}
+form{
+    @include flexColumn;
+    @include fontText;
+    font-weight: $font_weight_one;
+    background-color: $primary_color;
+    margin-top: $margin;
+    margin-bottom: $margin;
+    width: 40%;
+    border-radius: $border-radius;
+    height: $height_two;
+    color: $secondary_color;
+    input[type]{
+        padding: 15px;
+        border-radius: $border-radius;
+        border: none;
+    }
+    h1{
+        margin-top: $margin;
+    }
+}
+.form{
+    margin: $margin;
+}
+button{
+    @include fontText;
+    font-weight: $font_weight_one;
+    padding: 15px;
+    border-radius: $border-radius;
+    border: none; 
+    background-color: $primary_color;
+    color: $secondary_color;
+    text-transform: uppercase;
+    &:hover{
+        background-color: $secondary_color;
+        color: $primary_color;
+        transition: 0.5s;
+        &::after{
+            transition: 0.5s;
+        }
+    }
+}
+footer{
+    height: 80px;
+    color: $secondary_color;
+    background-color: $primary_color;
+    @include flexCenter;
+    i{
+        color: $secondary_color;
+        width: $font_weight_one;
+        @include flexCenter;
+        padding: 0px 60px;
+    }
+}
+@media screen and (max-width: 1050px){
+        .block_two #about_me .text_two{
+            width: 100%;
+            word-break: break-all;
+            margin: 0px auto;
+            h1{
+                margin-left: 3%;
+        }
+    }
+        #about_me{
+            p{
+                margin-left: 3%;
+        }
+    }
+}
+@media screen and (max-width: 940px){
+    #projects{
+        border: none;
+        h1{
+            background-color: $primary_color;
+            color: $secondary_color;
+            border-radius: 15px;
+            padding: 10px;
+            hr{
+                border: 1px solid $secondary_color;
+            }
+        }
+    }
+}
+    .block_two #about_me .text_two{
+        word-break: normal;
+        font-size: 10pt;
+        .block_two{
+            height: $height_two;
+    }
+}
+@media screen and (max-width: 720px){
+    .block_one{
+        width: 100%;
+        img{
+            width: 40%;
+            padding: 0px;
+        }
+        .text{
+            width: 40%;
+            h1{
+                font-size: 20pt;
+            }
+        }
+    }
+}
+@media screen and (max-width: 720px){
+    #projects{
+        width: 100%;
+        hr{ display: none;}
+        h1{
+            font-size: 40pt;
+            background-color: transparent;
+            color: $secondary_color;
+            @include fontText;
+            font-weight: $font_weight_one;
+            img{
+                width: 400px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 630px){
+    form{
+        width: 100%;
+        border-radius: 0px;
+        background-color: $secondary_color;
+        color: $primary_color;
+        :focus{
+            background-color: $primary_color;
+            color: $secondary_color;
+            border: none;
+        }
+    }
+    #projects{
+        img{
+            width: 300px;
+        }
+        h1{
+            font-size: 30pt;
+        }
+    }
+}
+@media screen and (max-width: 360px){
+    #header-all{
+        font-size: 9pt;
+        background-color: $secondary_color;
+        img{
+            width: 40px;
+        }
+    }
+    .block_one{
+        @include flexColumn;
+        h1{
+            color: $secondary_color;
+        }
+        hr{
+            border: 1px solid $secondary_color;
+        }
+        .text{
+            width: 100%;
+            color: $secondary_color;
+        }
+    }
+    .block_two{
+        background-image: none;
+        background-color: $primary_color;
+    }
+    #projects{
+        background-image: url("../img/background_responsive.jpg");
+        border-radius: 0px;
+        img{
+            border-radius: 20px;
+            width: 300px;
+        }
+    }
+    footer{
+        i{
+            padding: 0px 15px;
+            font-size: 20pt;
+        }
+    }
+}

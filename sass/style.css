@@ -1,0 +1,367 @@
+* {
+  margin: 0 auto;
+  padding: 0 auto;
+}
+
+body {
+  background-image: url("../img/background.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-color: black;
+}
+
+#header-all {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  color: black;
+  height: 30%;
+}
+#header-all img {
+  width: 70px;
+  border-radius: 25px;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+}
+.navigation li {
+  margin: 10px;
+  text-transform: uppercase;
+}
+.navigation li a {
+  color: black;
+  text-decoration: none;
+}
+.navigation li a:hover {
+  background-color: black;
+  padding: 5px;
+  color: white;
+  transition: 0.7s;
+  border-radius: 10px;
+}
+.navigation li a:hover::after {
+  transition: 0.7s;
+}
+
+ul {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.block_one {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  width: 80%;
+  margin-top: 5%;
+}
+.block_one img {
+  width: 35%;
+  padding: 0px 0px 0px 30px;
+}
+
+.text {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.text h1 {
+  font-size: 30pt;
+  color: black;
+  text-transform: uppercase;
+  text-align: center;
+}
+.text h1 hr {
+  color: black;
+}
+.text h1 hr p {
+  text-align: center;
+  font-size: 14pt;
+}
+
+progress {
+  width: 100%;
+}
+
+hr {
+  border: solid 1px black;
+}
+
+.block_two {
+  background-image: url(../img/background_two.jpg);
+  height: 600px;
+  width: 100%;
+}
+.block_two #about_me {
+  width: 100%;
+  text-align: left;
+  font-size: 14pt;
+  color: white;
+  font-weight: 200;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+.block_two #about_me h1 {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 35pt;
+  color: white;
+  margin: 10px;
+}
+
+.text_two {
+  margin-top: 20px;
+}
+
+#projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+  border-radius: 100px;
+  border: solid 3px black;
+}
+#projects img {
+  width: 550px;
+  border-radius: 70px;
+}
+#projects img:hover {
+  border-radius: 50px;
+  transition: 0.7s;
+  width: 600px;
+  transition: 0.6s;
+}
+#projects img:hover::after {
+  transition: 0.6s;
+}
+
+#projects h1 {
+  color: black;
+  margin-top: 20px;
+  text-transform: uppercase;
+  font-size: 35pt;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  font-weight: 600;
+}
+
+hr {
+  width: 100%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-weight: 600;
+  background-color: black;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 40%;
+  border-radius: 100px;
+  height: 400px;
+  color: white;
+}
+form input[type] {
+  padding: 15px;
+  border-radius: 100px;
+  border: none;
+}
+form h1 {
+  margin-top: 10px;
+}
+
+.form {
+  margin: 10px;
+}
+
+button {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-weight: 600;
+  padding: 15px;
+  border-radius: 100px;
+  border: none;
+  background-color: black;
+  color: white;
+  text-transform: uppercase;
+}
+button:hover {
+  background-color: white;
+  color: black;
+  transition: 0.5s;
+}
+button:hover::after {
+  transition: 0.5s;
+}
+
+footer {
+  height: 80px;
+  color: white;
+  background-color: black;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+}
+footer i {
+  color: white;
+  width: 600;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  padding: 0px 60px;
+}
+
+@media screen and (max-width: 1050px) {
+  .block_two #about_me .text_two {
+    width: 100%;
+    word-break: break-all;
+    margin: 0px auto;
+  }
+  .block_two #about_me .text_two h1 {
+    margin-left: 3%;
+  }
+  #about_me p {
+    margin-left: 3%;
+  }
+}
+@media screen and (max-width: 940px) {
+  #projects {
+    border: none;
+  }
+  #projects h1 {
+    background-color: black;
+    color: white;
+    border-radius: 15px;
+    padding: 10px;
+  }
+  #projects h1 hr {
+    border: 1px solid white;
+  }
+}
+.block_two #about_me .text_two {
+  word-break: normal;
+  font-size: 10pt;
+}
+.block_two #about_me .text_two .block_two {
+  height: 400px;
+}
+
+@media screen and (max-width: 720px) {
+  .block_one {
+    width: 100%;
+  }
+  .block_one img {
+    width: 40%;
+    padding: 0px;
+  }
+  .block_one .text {
+    width: 40%;
+  }
+  .block_one .text h1 {
+    font-size: 20pt;
+  }
+}
+@media screen and (max-width: 720px) {
+  #projects {
+    width: 100%;
+  }
+  #projects hr {
+    display: none;
+  }
+  #projects h1 {
+    font-size: 40pt;
+    background-color: transparent;
+    color: white;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-weight: 600;
+  }
+  #projects h1 img {
+    width: 400px;
+  }
+}
+@media screen and (max-width: 630px) {
+  form {
+    width: 100%;
+    border-radius: 0px;
+    background-color: white;
+    color: black;
+  }
+  form :focus {
+    background-color: black;
+    color: white;
+    border: none;
+  }
+  #projects img {
+    width: 300px;
+  }
+  #projects h1 {
+    font-size: 30pt;
+  }
+}
+@media screen and (max-width: 360px) {
+  #header-all {
+    font-size: 9pt;
+    background-color: white;
+  }
+  #header-all img {
+    width: 40px;
+  }
+  .block_one {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .block_one h1 {
+    color: white;
+  }
+  .block_one hr {
+    border: 1px solid white;
+  }
+  .block_one .text {
+    width: 100%;
+    color: white;
+  }
+  .block_two {
+    background-image: none;
+    background-color: black;
+  }
+  #projects {
+    background-image: url("../img/background_responsive.jpg");
+    border-radius: 0px;
+  }
+  #projects img {
+    border-radius: 20px;
+    width: 300px;
+  }
+  footer i {
+    padding: 0px 15px;
+    font-size: 20pt;
+  }
+}/*# sourceMappingURL=style.css.map */
